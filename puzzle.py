@@ -8,7 +8,8 @@ Authors: Dake Guo, Yu Xu
 Welcome to our final project!
 The goal of this project is to write a python code in order to
 generate a playable puzzle game
-The puzzle game is set to three levels, 3*3, 4*4, 5*5, press l/m/h to enter either mode
+The puzzle game is set to three levels, 3*3, 4*4, 5*5, press l/m/h to
+enter either mode
 you can you mouse or WASD to complete the puzzle.
 
 In order to play the puzzle game, you will need this python file and .TTF file
@@ -101,7 +102,8 @@ def Mix(row, col, grid):
 def Chosepicture(picture_path):
     picturename = os.listdir(picture_path)
     # verify whether there is a picture
-    # the image save path is same as the program path, convenient to get the path
+    # the image save path is same as the program path,
+    # convenient to get the path
     # then get the image path
     if len(picturename) > 0:
         return os.path.join(picture_path, random.choice(picturename))
