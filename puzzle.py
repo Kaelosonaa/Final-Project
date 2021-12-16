@@ -6,15 +6,18 @@ Final Project Fall 2021
 Authors: Dake Guo, Yu Xu
 
 Welcome to our final project!
-The goal of this project is to write a python code in order to generate a playable puzzle game
+The goal of this project is to write a python code in order to
+generate a playable puzzle game
 The puzzle game is set to three levels, 3*3, 4*4, 5*5, press l/m/h to enter either mode
 you can you mouse or WASD to complete the puzzle.
 
-In order to play the puzzle game, you will need this python file and .TTF file and images can be found in our repository.
+In order to play the puzzle game, you will need this python file and .TTF file
+and images can be found in our repository.
 You can change any pictures you want to enjoy the game time.
 You can also change the difficulty of the game any time you want.
 
-The main idea of this file is to generate blocks that compose puzzle block, break the picture into fragements and reshuffle it.
+The main idea of this file is to generate blocks that compose puzzle block,
+break the picture into fragements and reshuffle it.
 Thus far you can change the difficuly of the game anytime you want.
 
 Hope you enjoy the game!
@@ -282,6 +285,7 @@ def main():
             bool = False
         # refresh the screem
         window.fill((255, 255, 255))
+
         for i in range(grid):
             if game_screen[i] == -1:
                 continue
