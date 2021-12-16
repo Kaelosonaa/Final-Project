@@ -293,17 +293,20 @@ def main():
                 continue
             x_pos = i // col
             y_pos = i % col
+            gs = game_screen
             w = blockwidth
             h = blockheight
             rect = pygame.Rect(y_pos * w, x_pos * h, w, h)
-            place = pygame.Rect((game_screen[i] % col) * w, (game_screen[i] // col) * h, w, h)
+            place = pygame.Rect((gs[i] % col) * w, (gs[i] // col) * h, w, h)
             window.blit(picture, rect, place)
 
         for i in range(col + 1):
-            pygame.draw.line(window, (0, 0, 0), (i * w, 0), (i * w, picture_rect.height))
+            pr = picture_rect
+            pygame.draw.line(window, (0, 0, 0), (i * w, 0), (i * w, pr.height))
 
         for i in range(row + 1):
-            pygame.draw.line(window, (0, 0, 0), (0, i * h), (picture_rect.width, i * h))
+            pr = picture_rect
+            pygame.draw.line(window, (0, 0, 0), (0, i * h), (pr.width, i * h))
 
         pygame.display.update()
         clock.tick(10)
